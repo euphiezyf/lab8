@@ -9,11 +9,12 @@ exports.adminView = function(request, response){
   response.render('rsvp', data);
 };
 
-exports.addRSVP = function(req, res) {
-  var rsvpEmail = req.body.rsvpEmail;
-  console.log(rsvpEmail);
+exports.addRSVP = function(request, response) {
+  var rsvpEmail = request.body.rsvpEmail;
 
-  data.rsvp.push(rsvpEmail);
+    console.log(rsvpEmail);
 
-  res.send(rsvpEmail);
+    data.rsvp.push(rsvpEmail);
+
+    response.send(rsvpEmail);
 }
